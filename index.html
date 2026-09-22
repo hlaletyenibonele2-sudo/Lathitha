@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7f8">
+  <title>Document Verification</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loading">
+    <div class="loader-ring"></div>
+    <p>SECURE DOCUMENT SYSTEM</p>
+  </div>
+
+  <div id="app">
+
+    <!-- FAKE SERIOUS DOCUMENT -->
+    <section id="documentPage" class="screen active">
+      <div class="document" id="documentCard">
+        <div class="document-top">
+          <span>CONFIDENTIAL</span>
+          <span>FORM 01-BD</span>
+        </div>
+
+        <div class="seal">✓</div>
+
+        <div class="doc-status"><span></span> SECURE CONNECTION</div>
+
+        <h1>Personal Document<br>Verification</h1>
+        <p class="subtitle">Please complete the verification form below to access the attached document</p>
+
+        <div class="notice">
+          <strong>IMPORTANT NOTICE</strong>
+          <p>The information provided must match the intended recipient. This document contains personal content and should only be accessed by the person named below.</p>
+        </div>
+
+        <form id="verificationForm" novalidate>
+          <label for="name">First Name</label>
+          <input id="name" type="text" placeholder="Enter first name" autocomplete="off" required>
+
+          <label for="surname">Surname</label>
+          <input id="surname" type="text" placeholder="Enter surname" autocomplete="off" required>
+
+          <label class="check">
+            <input type="checkbox" id="confirmCheck" required>
+            <span>I confirm that I am the intended recipient of this document.</span>
+          </label>
+
+          <button type="submit" id="verifyBtn">
+            <span class="btn-label">VERIFY &amp; OPEN DOCUMENT</span>
+            <span class="arrow">→</span>
+          </button>
+        </form>
+
+        <div class="document-footer">
+          <span id="statusText">STATUS: PENDING VERIFICATION</span>
+          <span>SECURE ACCESS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIRTHDAY EXPERIENCE -->
+    <main id="birthdayPage" class="birthday hidden">
+      <div class="progress-bar"><div id="progress"></div></div>
+
+      <button class="music-toggle" id="musicToggle" title="Play music">
+        ♫ <span>Music</span>
+      </button>
+
+      <audio id="music" loop preload="none">
+        <source src="assets/music.mp3" type="audio/mpeg">
+      </audio>
+
+      <div id="cursor-heart">♥</div>
+      <div class="floating-hearts" id="floatingHearts"></div>
+
+      <section class="hero reveal">
+        <p class="tiny">DOCUMENT STATUS: VERIFIED ✓</p>
+
+        <div class="surprise-badge">ACCESS GRANTED</div>
+
+        <div class="glitch-wrap">
+          <h1>Happy Birthday,<br><span id="herName">Beautiful</span>!</h1>
+        </div>
+
+        <p class="hero-text">You thought you were opening a serious document...</p>
+        <p class="hero-text strong">Unfortunately for you, I had other plans. 😂❤️</p>
+        <p class="hero-text">Alot of words fill my heart, limited time to say it all🥹</p>
+
+        <div class="scroll-hint">
+          <span>Chofoza le button🥹</span>
+          <button class="scroll-btn" onclick="openMemories()">OPEN IT ↓</button>
+        </div>
+      </section>
+
+      <div id="lockedContent">
+
+      <section class="memory reveal" id="memory1">
+        <div class="photo-wrap">
+          <div class="photo-number">01</div>
+          <img src="assets/photo1.jpg" alt="A special memory" loading="lazy">
+        </div>
+        <div class="message">
+          <span class="number">01 / 05</span>
+          <h2>The Beginning</h2>
+          <p>Since G10 mnganam , it was love at first sight🤝</p>
+        </div>
+      </section>
+
+      <section class="memory reverse reveal" id="memory2">
+        <div class="photo-wrap">
+          <div class="photo-number">02</div>
+          <img src="assets/photo2.jpeg" alt="A special memory" loading="lazy">
+        </div>
+        <div class="message">
+          <span class="number">02 / 05</span>
+          <h2>Your Smile</h2>
+          <p>There was something about your smile that brightened my day:JOLA🥹</p>
+        </div>
+      </section>
+
+      <section class="memory reveal" id="memory3">
+        <div class="photo-wrap">
+          <div class="photo-number">03</div>
+          <img src="assets/photo3.jpg" alt="A special memory" loading="lazy">
+        </div>
+        <div class="message">
+          <span class="number">03 / 05</span>
+          <h2>The Little Details</h2>
+          <p>The little moments and small time we shared in high school meant the whole universe to me yayazi?🥹</p>
+        </div>
+      </section>
+
+      <section class="memory reverse reveal" id="memory4">
+        <div class="photo-wrap">
+          <div class="photo-number">04</div>
+          <img src="assets/photo4.jpg" alt="A special memory" loading="lazy">
+        </div>
+        <div class="message">
+          <span class="number">04 / 05</span>
+          <h2>My Favourite Person</h2>
+          <p>In the whole world, u nozala akaliboni kuwe 😎</p>
+        </div>
+      </section>
+
+      <section class="memory reveal" id="memory5">
+        <div class="photo-wrap">
+          <div class="photo-number">05</div>
+          <img src="assets/photo5.jpg" alt="A special memory" loading="lazy">
+        </div>
+        <div class="message">
+          <span class="number">05 / 05</span>
+          <h2>One More Thing...</h2>
+          <p>May the lord erase every pain and suffering you've endured the past year, akukhumbuze uyathandwa fondini❤️I believe you'll be something great</p>
+        </div>
+      </section>
+
+      <section class="reasons reveal">
+        <p class="tiny">A FEW THINGS I HOPE YOU NEVER FORGET</p>
+        <h2>You Are...</h2>
+
+        <div class="reason-grid">
+          <div><span>❤️</span><b>Loved</b><small>More than you'll ever imagine</small></div>
+          <div><span>✨</span><b>Beautiful</b><small>In everyway possible</small></div>
+          <div><span>🌷</span><b>Special</b><small>In my heart nazo zonke ezikaka zikushelayo</small></div>
+          <div><span>😂</span><b>Unforgettable</b><small>For all the right reasons.</small></div>
+          <div><span>🫶</span><b>Appreciated</b><small>Every single day, hour, minute, second and milisecond</small></div>
+          <div><span>🌟</span><b>One of a kind</b><small>Unique and true to your self, uthi kutheni ndikuncanywa so?</small></div>
+        </div>
+      </section>
+
+      <section class="finale reveal" id="finale">
+        <div class="final-photo">
+          <img src="assets/photo5.jpeg" alt="Birthday photo" loading="lazy">
+        </div>
+
+        <p class="tiny">FINAL MESSAGE</p>
+        <h2>Happy Birthday, <span id="finalName">Beautiful</span> ❤️</h2>
+
+        <div class="typewriter-box">
+          <p id="typewriter"></p>
+        </div>
+
+        <p class="signature">With love,<br><strong>TA LOGIC ❤️</strong></p>
+
+        <button class="replay" onclick="replayExperience()">↻ READ AGAIN</button>
+        <p class="end-note">PS: IT TOOK ME A MONTH TO CODE, THIS DON'T JUDGE😭</p>
+      </section>
+
+      </div><!-- /lockedContent -->
+    </main>
+  </div>
+
+  <div id="confetti"></div>
+  <script src="script.js"></script>
+</body>
+</html>
