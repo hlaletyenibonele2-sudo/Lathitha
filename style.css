@@ -253,6 +253,10 @@ section { position: relative; padding: 80px 20px; max-width: 640px; margin: 0 au
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+/* nothing past the hero exists on screen (or in layout) until she presses OPEN IT */
+#lockedContent { display: none; }
+#lockedContent.unlocked { display: block; }
+
 .hero { text-align: center; padding-top: 60px; }
 .tiny { font-size: 0.7rem; letter-spacing: 1.5px; color: var(--accent); font-weight: 600; }
 .surprise-badge {
