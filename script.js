@@ -155,7 +155,7 @@ function burstConfetti() {
 // ---------- Typewriter for the finale message ----------
 function initTypewriter() {
   const el = document.getElementById('typewriter');
-  const message = "Every scroll, every photo, every word here was for you. I hope it made you smile even for a second.";
+  const message = "Thank you for all that you taught me in life.Every scroll, every photo, every word here was for you. I hope it made you smile even for a second.";
   let i = 0;
 
   const finale = document.getElementById('finale');
