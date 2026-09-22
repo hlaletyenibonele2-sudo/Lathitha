@@ -42,8 +42,9 @@ form.addEventListener('submit', (e) => {
     documentPage.style.display = 'none';
     birthdayPage.classList.remove('hidden');
 
-    document.getElementById('herName').textContent = name;
-    document.getElementById('finalName').textContent = name;
+   const NICKNAME = "Ntombi"; // change this whenever
+  document.getElementById('herName').textContent = NICKNAME;
+  document.getElementById('finalName').textContent = NICKNAME;
 
     // start music on this click (user gesture, so autoplay restrictions won't block it)
     music.volume = 0.5;
