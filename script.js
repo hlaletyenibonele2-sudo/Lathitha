@@ -42,9 +42,8 @@ form.addEventListener('submit', (e) => {
     documentPage.style.display = 'none';
     birthdayPage.classList.remove('hidden');
 
-const NICKNAME = "MITOTO"; // change this whenever
-document.getElementById('herName').textContent = NICKNAME;
-document.getElementById('finalName').textContent = NICKNAME;
+    document.getElementById('herName').textContent = name;
+    document.getElementById('finalName').textContent = name;
 
     // start music on this click (user gesture, so autoplay restrictions won't block it)
     music.volume = 0.5;
@@ -62,6 +61,15 @@ function goTo(id) {
   document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
 window.goTo = goTo;
+
+// ---------- Reveal memories 1-5, reasons, and finale ONLY on explicit click ----------
+// Until this runs, #lockedContent is display:none — nothing in it can be scrolled
+// into or peeked at, even partially.
+function openMemories() {
+  document.getElementById('lockedContent').classList.add('unlocked');
+  goTo('memory1');
+}
+window.openMemories = openMemories;
 
 // ---------- Replay ----------
 function replayExperience() {
@@ -155,7 +163,7 @@ function burstConfetti() {
 // ---------- Typewriter for the finale message ----------
 function initTypewriter() {
   const el = document.getElementById('typewriter');
-  const message = "Thank you for all that you taught me in life.Every scroll, every photo, every word here was for you. I hope it made you smile even for a second.";
+  const message = "Every scroll, every photo, every word here was for you. I hope it made you smile even for a second.";
   let i = 0;
 
   const finale = document.getElementById('finale');
